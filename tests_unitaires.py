@@ -33,3 +33,18 @@ def test_Wizard():
     wizard = Wizard("Gandalf")
     expected_Wizard_name = "Gandalf"
     assert wizard.name == expected_Wizard_name
+    assert wizard.get_life_points() == 80
+
+def test_hit_Wizard():
+    wizard = Wizard("Gandalf")
+    wizard.hit(wizard)
+    expected_life = 65
+    assert wizard.life_points == expected_life
+
+def test_healthPotion_was_used_by():
+    person = Person("Bob")
+    HealthPotion.was_used_by(person)
+    assert person.get_life_points() == 110
+    wizard = Wizard("Gandalf")
+    HealthPotion.was_used_by(wizard)
+    assert wizard.get_life_points() == 90
