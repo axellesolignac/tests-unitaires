@@ -8,7 +8,6 @@ jobs:
       - name: Run tests
         run: |
           pip install pytest
-          pip install numpy
           pytest tests_unitaires.py
       - name: build docker image
         run:
