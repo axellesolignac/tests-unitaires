@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run tests
+      - name: run tests unitaires
         run: |
           pip install pytest
           pytest tests_unitaires.py
